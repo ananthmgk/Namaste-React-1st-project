@@ -27457,7 +27457,7 @@ var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _s = $RefreshSig$();
 function filterData(searchInput, allRestaurants) {
-    return allRestaurants.filter((restaurant)=>restaurant.info.name.includes(searchInput));
+    return allRestaurants.filter((restaurant)=>restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase()));
 }
 const Body = ()=>{
     _s();
@@ -27522,7 +27522,13 @@ const Body = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-list",
-                children: filteredRestaurants.map((restaurant)=>{
+                children: filteredRestaurants.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "No Restaurant match your Filter"
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 41,
+                    columnNumber: 44
+                }, undefined) : filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
                         ...restaurant.info,
                         key: restaurant.info.id,
