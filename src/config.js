@@ -1,4 +1,11 @@
 export const imgCdnUrl = "https://media-assets.swiggy.com/";
+
+export const fetchResMenuUrl =
+  "https://www.snapdeal.com/acors/web/getSelfieList/v2?productId=";
+
+export const fetchRestDataUrl =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.192651399999999&lng=77.43003569999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
 export const restaurantsList = [
   {
     info: {

@@ -1752,3 +1752,21 @@ const [SearchInput, setSearchInput] = useState("KFC"); // To create state variab
     })
   );
 }
+<div>
+  <div>
+    <h1>Restaurant id: {id}</h1>
+    <h2>{restaurant.name}</h2>
+    <img src={imgCdnUrl + restaurant.cloudnaryImage} />
+    <h3>{restaurant.area}</h3>
+    <h3>{restaurant.city}</h3>
+    <h3>{restaurant.avgRating}</h3>
+  </div>
+  <div>
+    <h1>Menu</h1>
+    <ul>
+      {Object.values(restaurant?.menu?.items).map((item) => (
+        <li key={item.id}>{item.name}</li>
+      ))}
+    </ul>
+  </div>
+</div>;

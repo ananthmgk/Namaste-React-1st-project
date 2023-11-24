@@ -1,28 +1,21 @@
 import { useEffect, useState } from "react";
-// import { restaurantsList } from "../config";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-
-function filterData(searchInput, allRestaurants) {
-  return allRestaurants.filter((restaurant) =>
-    restaurant.info.name.toLowerCase().includes(searchInput.toLowerCase())
-  );
-}
+import { Link } from "react-router-dom";
+import { filterData } from "../uttilites/helper";
+import useOnline from "../uttilites/useOnline";
+import { fetchRestDataUrl } from "../config";
 
 const Body = () => {
   const [filteredRestaurants, setfilteredRestaurants] = useState([]);
-  console.log(filteredRestaurants);
   const [allRestaurants, setallRestaurants] = useState([]);
-  console.log(allRestaurants);
   const [searchInput, setSearchInput] = useState("");
   useEffect(() => {
     getRestaurants();
   }, []);
 
   async function getRestaurants() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=8.192651399999999&lng=77.43003569999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const data = await fetch(fetchRestDataUrl);
     const json = await data.json();
     // console.log(
     //   json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
@@ -34,6 +27,11 @@ const Body = () => {
     setfilteredRestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+  }
+
+  const isOnline = useOnline();
+  if (!isOnline) {
+    return <h1>Your in Offline, Please check your Internet Connection</h1>;
   }
 
   if (!allRestaurants) return null;
@@ -68,7 +66,12 @@ const Body = () => {
         ) : (
           filteredRestaurants.map((restaurant) => {
             return (
-              <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+              <Link
+                to={"/restaurant/" + "682622706581"}
+                key={restaurant.info.id}
+              >
+                <RestaurantCard {...restaurant.info} />
+              </Link>
             );
           })
         )}
