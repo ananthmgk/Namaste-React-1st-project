@@ -23,3 +23,4 @@ const useGetRestaurants = () => {
   return allRestaurants;
 };
 export default useGetRestaurants;
+// this component is not used.....
