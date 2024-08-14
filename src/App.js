@@ -34,7 +34,7 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       {
-        path: "/about", // "about" is same.
+        path: "/about", // "about" is also same.
         element: <About />,
         children: [
           {

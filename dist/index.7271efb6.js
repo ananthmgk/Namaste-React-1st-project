@@ -3015,7 +3015,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             },
             {
                 path: "/about",
-                // "about" is same.
+                // "about" is also same.
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 32,
@@ -34062,9 +34062,9 @@ const Body = ()=>{
     const [filteredRestaurants, setfilteredRestaurants] = (0, _react.useState)([]);
     const [allRestaurants, setallRestaurants] = (0, _react.useState)([]);
     const [searchInput, setSearchInput] = (0, _react.useState)("");
-    (0, _react.useEffect)(()=>{
-        getRestaurants();
-    }, []);
+    // useEffect(() => {
+    //   getRestaurants();
+    // }, []);
     async function getRestaurants() {
         const data = await fetch((0, _config.fetchRestDataUrl));
         const json = await data.json();
@@ -34080,13 +34080,13 @@ const Body = ()=>{
         children: "Your in Offline, Please check your Internet Connection"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 27,
+        lineNumber: 28,
         columnNumber: 12
     }, undefined);
     if (!allRestaurants) return null;
     return allRestaurants?.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 40
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -34103,7 +34103,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34115,13 +34115,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34130,7 +34130,7 @@ const Body = ()=>{
                     children: "No Restaurant match your Filter"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 43,
+                    lineNumber: 44,
                     columnNumber: 44
                 }, undefined) : filteredRestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -34139,24 +34139,24 @@ const Body = ()=>{
                             ...restaurant.info
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 45,
+                            lineNumber: 46,
                             columnNumber: 17
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 16
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "yZlfbSgYbId1nZADe5ZqBJ5n4s0=", false, function() {
+_s(Body, "ldWyMcm+xgvGhiTtbRdYq156f+o=", false, function() {
     return [
         (0, _useOnlineDefault.default)
     ];
@@ -36112,68 +36112,33 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _s = $RefreshSig$();
 const ProfileFunc = (props)=>{
-    _s();
-    const [count1, setcount1] = (0, _react.useState)(0);
-    const [count2] = (0, _react.useState)(1);
-    (0, _react.useEffect)(()=>{
-        const timer = setInterval(()=>{
-            console.log("Namaste React OP");
-        }, 100);
-        console.log("useEffect");
-        return ()=>{
-            clearInterval(timer);
-            console.log("useEffect Return");
-        };
-    }, []);
+    // const [count1, setcount1] = useState(0);
+    // const [count2] = useState(1);
+    // useEffect(() => {
+    //   const timer = setInterval(() => {
+    //     console.log("Namaste React OP");
+    //   }, 100);
+    //   console.log("useEffect");
+    //   return () => {
+    //     clearInterval(timer);
+    //     console.log("useEffect Return");
+    //   };
+    // }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "This is Functional base Profile Component"
-            }, void 0, false, {
-                fileName: "src/components/ProfileFunc.js",
-                lineNumber: 16,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    "Name: ",
-                    props.name
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ProfileFunc.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: [
-                    "CountFunc: ",
-                    count1
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ProfileFunc.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: ()=>{
-                    setcount1(1);
-                },
-                children: "Count"
-            }, void 0, false, {
-                fileName: "src/components/ProfileFunc.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "This is Functional base Profile Component"
+        }, void 0, false, {
+            fileName: "src/components/ProfileFunc.js",
+            lineNumber: 16,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/ProfileFunc.js",
         lineNumber: 15,
         columnNumber: 10
     }, undefined);
 };
-_s(ProfileFunc, "XPjYLhZOO48uimbNFsF3yrJkIXM=");
 _c = ProfileFunc;
 exports.default = ProfileFunc;
 var _c;

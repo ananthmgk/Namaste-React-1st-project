@@ -1,0 +1,3 @@
+var e=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire7444;e.register("fMTFv",function(n,i){Object.defineProperty(n.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(n.exports,"default",{get:()=>d,set:void 0,enumerable:!0,configurable:!0});var o=e("9oYgW"),d=()=>/*#__PURE__*/(0,o.jsxs)("div",{children:[/*#__PURE__*/(0,o.jsx)("h1",{children:"Instamart"}),/*#__PURE__*/(0,o.jsx)("h1",{children:"100s of components inside it.."})]})});//# sourceMappingURL=Instamart.6edab226.js.map
+
+//# sourceMappingURL=Instamart.6edab226.js.map

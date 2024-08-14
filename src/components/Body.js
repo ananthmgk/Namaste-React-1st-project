@@ -10,9 +10,9 @@ const Body = () => {
   const [filteredRestaurants, setfilteredRestaurants] = useState([]);
   const [allRestaurants, setallRestaurants] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  useEffect(() => {
-    getRestaurants();
-  }, []);
+  // useEffect(() => {
+  //   getRestaurants();
+  // }, []);
 
   async function getRestaurants() {
     const data = await fetch(fetchRestDataUrl);

@@ -245,11 +245,6 @@ img, video {
   margin: .5rem;
 }
 
-.my-2 {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -261,10 +256,6 @@ img, video {
 
 .h-28 {
   height: 7rem;
-}
-
-.w-52 {
-  width: 13rem;
 }
 
 .w-\[200px\] {
@@ -279,32 +270,8 @@ img, video {
   justify-content: space-between;
 }
 
-.rounded-xl {
-  border-radius: .75rem;
-}
-
 .rounded-md {
   border-radius: .375rem;
-}
-
-.bg-pink-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
-}
-
-.bg-purple-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 245 255 / var(--tw-bg-opacity));
-}
-
-.bg-purple-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
-}
-
-.bg-pink-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
 .bg-pink-100 {
@@ -312,27 +279,32 @@ img, video {
   background-color: rgb(252 231 243 / var(--tw-bg-opacity));
 }
 
-.bg-green-50 {
+.bg-pink-50 {
   --tw-bg-opacity: 1;
-  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity));
 }
 
-.p-5 {
-  padding: 1.25rem;
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
 .p-2 {
   padding: .5rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-2 {
   padding-left: .5rem;
   padding-right: .5rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pl-2 {
@@ -342,11 +314,6 @@ img, video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -371,11 +338,6 @@ img, video {
 .hover\:bg-gray-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.focus\:bg-green-50:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 253 244 / var(--tw-bg-opacity));
 }
 
 .focus\:bg-green-200:focus {
